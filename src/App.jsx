@@ -162,122 +162,133 @@ function App() {
 
             {/* App Mockup - Mail Client Style */}
             <div className="relative max-w-6xl mx-auto mt-12">
-              <div className="relative rounded-lg bg-[#09090b] border border-white/10 shadow-2xl overflow-hidden ring-1 ring-white/5">
-                {/* Window Controls */}
-                <div className="h-9 bg-[#09090b] border-b border-white/5 flex items-center px-4 justify-between">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-[#27272a]"></div>
-                    <div className="w-3 h-3 rounded-full bg-[#27272a]"></div>
-                    <div className="w-3 h-3 rounded-full bg-[#27272a]"></div>
+              <div className="relative rounded-lg bg-[#1E1E1E] border border-white/10 shadow-2xl overflow-hidden ring-1 ring-white/5 font-sans">
+                {/* Window Header / Toolbar */}
+                <div className="h-10 bg-[#1E1E1E] border-b border-black/40 flex items-center px-4 justify-between text-zinc-400 text-xs select-none">
+                  <div className="flex items-center gap-6">
+                     {/* Window Controls (Fake) */}
+                     <div className="flex gap-2 mr-4">
+                        <div className="w-3 h-3 rounded-full bg-[#FF5F56]"></div>
+                        <div className="w-3 h-3 rounded-full bg-[#FFBD2E]"></div>
+                        <div className="w-3 h-3 rounded-full bg-[#27C93F]"></div>
+                      </div>
+                      
+                      <div className="flex items-center gap-4 font-medium text-zinc-300">
+                        <div className="flex items-center gap-2 hover:text-white cursor-pointer bg-white/10 px-2 py-1 rounded">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            {t.mockup.tabs.mail}
+                        </div>
+                        <div className="flex items-center gap-2 hover:text-white cursor-pointer">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                            {t.mockup.tabs.calendar}
+                        </div>
+                        <div className="flex items-center gap-2 hover:text-white cursor-pointer">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            {t.mockup.tabs.contacts}
+                        </div>
+                        <div className="flex items-center gap-2 hover:text-white cursor-pointer">
+                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                            {t.mockup.tabs.tasks}
+                        </div>
+                      </div>
                   </div>
-                  <div className="text-xs text-zinc-500 font-mono flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-blue-500"></span>
-                    Vzuuh — {t.mockup.inbox}
-                  </div>
-                  <div className="flex gap-3 text-zinc-600">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" /></svg>
+                  
+                  <div className="flex items-center gap-4">
+                     <div className="flex items-center gap-1 hover:text-white cursor-pointer">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                        {t.mockup.compose}
+                     </div>
+                     <div className="w-6 h-6 rounded-full bg-zinc-700 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                     </div>
                   </div>
                 </div>
 
                 {/* Interface */}
-                <div className="grid grid-cols-12 h-[600px] bg-[#09090b] text-zinc-400 font-sans text-sm">
-                  {/* Sidebar */}
-                  <div className="col-span-3 border-r border-white/5 p-0 flex flex-col">
-                    <div className="p-3 text-xs font-bold text-zinc-500 uppercase tracking-wider flex justify-between items-center">
-                      {t.mockup.mailboxes}
-                      <svg className="w-3 h-3 cursor-pointer hover:text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-                    </div>
-                    <div className="flex-1 overflow-y-auto font-medium">
-                      <div className="px-3 py-1.5 text-blue-400 bg-blue-500/10 cursor-pointer flex items-center gap-2 justify-between border-l-2 border-blue-500">
-                        <div className="flex items-center gap-2">
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" /></svg>
-                            {t.mockup.inbox}
+                <div className="grid grid-cols-12 h-[600px] bg-[#121212] text-zinc-400 text-sm">
+                  {/* Sidebar (Left) */}
+                  <div className="col-span-3 bg-[#18181b] border-r border-black/40 flex flex-col">
+                    <div className="flex-1 overflow-y-auto py-2">
+                        {/* COMMON Section */}
+                        <div className="px-4 py-2 text-[10px] font-bold text-zinc-500 uppercase tracking-wider">{t.mockup.sections.common}</div>
+                        <div className="space-y-0.5">
+                            <div className="px-4 py-1.5 hover:bg-white/5 cursor-pointer flex items-center gap-3 text-zinc-300">
+                                <svg className="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                                <span>{t.mockup.folders.all_inboxes}</span>
+                            </div>
+                            <div className="px-4 py-1.5 hover:bg-white/5 cursor-pointer flex items-center gap-3 text-zinc-300">
+                                <svg className="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
+                                <span>{t.mockup.folders.starred}</span>
+                            </div>
+                            <div className="px-4 py-1.5 hover:bg-white/5 cursor-pointer flex items-center gap-3 text-zinc-300">
+                                <svg className="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                <span>{t.mockup.folders.unread}</span>
+                            </div>
+                            <div className="px-4 py-1.5 hover:bg-white/5 cursor-pointer flex items-center gap-3 text-zinc-300">
+                                <svg className="w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-8a2 2 0 012-2h14a2 2 0 012 2v8H3zM3 10V5a2 2 0 012-2h14a2 2 0 012 2v5" /></svg>
+                                <span>{t.mockup.folders.flagged}</span>
+                            </div>
                         </div>
-                        <span className="text-xs bg-blue-500 text-white px-1.5 rounded-full">4</span>
-                      </div>
-                      <div className="px-3 py-1.5 text-zinc-500 hover:text-zinc-300 hover:bg-white/5 cursor-pointer flex items-center gap-2 border-l-2 border-transparent">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>
-                        {t.mockup.starred}
-                      </div>
-                      <div className="px-3 py-1.5 text-zinc-500 hover:text-zinc-300 hover:bg-white/5 cursor-pointer flex items-center gap-2 border-l-2 border-transparent">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
-                        {t.mockup.sent}
-                      </div>
-                      <div className="px-3 py-1.5 text-zinc-500 hover:text-zinc-300 hover:bg-white/5 cursor-pointer flex items-center gap-2 border-l-2 border-transparent">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-                        {t.mockup.trash}
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Email List */}
-                  <div className="col-span-9 bg-[#09090b] flex flex-col">
-                    {/* Tabs / Toolbar */}
-                    <div className="flex border-b border-white/5 h-10 items-center px-4 gap-4 bg-[#09090b]">
-                        <div className="flex items-center gap-3 text-zinc-400 text-xs font-medium">
-                            <span className="text-zinc-200 bg-white/10 px-2 py-0.5 rounded hover:bg-white/20 cursor-pointer transition-colors">{t.mockup.all}</span>
-                            <span className="hover:text-zinc-200 cursor-pointer transition-colors">{t.mockup.unread}</span>
-                            <span className="hover:text-zinc-200 cursor-pointer transition-colors">{t.mockup.tags}</span>
-                        </div>
-                        <div className="flex-1"></div>
-                        <div className="flex gap-3 text-zinc-500">
-                            <svg className="w-4 h-4 hover:text-zinc-300 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                            <svg className="w-4 h-4 hover:text-zinc-300 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
+                        {/* MAIL Section */}
+                        <div className="px-4 py-2 mt-4 text-[10px] font-bold text-zinc-500 uppercase tracking-wider">{t.mockup.sections.mail}</div>
+                        <div className="space-y-0.5">
+                            <div className="px-4 py-1.5 hover:bg-white/5 cursor-pointer flex items-center gap-2 text-zinc-300">
+                                <svg className="w-3 h-3 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                                <span className="truncate">user@example.com</span>
+                            </div>
+                            <div className="px-4 py-1.5 hover:bg-white/5 cursor-pointer flex items-center gap-2 text-zinc-300">
+                                <svg className="w-3 h-3 text-zinc-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                                <span className="truncate">work@company.com</span>
+                            </div>
                         </div>
                     </div>
                     
-                    {/* List */}
+                    {/* Bottom Icons */}
+                    <div className="p-2 border-t border-black/40 flex justify-around text-zinc-500">
+                        <svg className="w-5 h-5 hover:text-zinc-300 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        <svg className="w-5 h-5 hover:text-zinc-300 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        <svg className="w-5 h-5 hover:text-zinc-300 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    </div>
+                  </div>
+
+                  {/* Message List (Middle) */}
+                  <div className="col-span-4 bg-[#18181b] border-r border-black/40 flex flex-col">
+                    <div className="p-4 border-b border-black/40">
+                        <h2 className="text-xl font-bold text-zinc-100 mb-3">{t.mockup.sent}</h2>
+                        <div className="relative">
+                            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                            <input type="text" placeholder={t.mockup.search_placeholder} className="w-full bg-[#27272a] border border-transparent rounded px-9 py-1.5 text-sm text-zinc-300 focus:outline-none focus:bg-black/20 placeholder:text-zinc-600" />
+                        </div>
+                    </div>
                     <div className="flex-1 overflow-y-auto">
-                        {/* Email Item 1 */}
-                        <div className="flex items-start gap-4 p-4 border-b border-white/5 bg-blue-500/5 hover:bg-blue-500/10 cursor-pointer group transition-colors">
-                            <div className="w-8 h-8 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center text-xs font-bold shrink-0">AS</div>
-                            <div className="flex-1 min-w-0">
-                                <div className="flex justify-between items-baseline mb-1">
-                                    <span className="text-zinc-200 font-semibold truncate">Alice Smith</span>
-                                    <span className="text-zinc-500 text-xs">10:42 AM</span>
+                        {/* Email Item */}
+                        <div className="p-4 border-b border-white/5 hover:bg-white/5 cursor-pointer group relative">
+                            <div className="absolute right-2 top-4 w-2 h-2 rounded-full bg-blue-500"></div>
+                            <div className="flex items-start gap-3">
+                                <div className="w-10 h-10 rounded-full bg-cyan-500 flex items-center justify-center text-white font-bold shrink-0 shadow-lg shadow-cyan-500/20">
+                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                                 </div>
-                                <div className="text-zinc-300 text-sm font-medium truncate mb-0.5">Project Update: Q4 Roadmap</div>
-                                <div className="text-zinc-500 text-xs truncate leading-relaxed">Hey team, just wanted to share the latest progress on the Q4 roadmap. We've hit all our milestones for...</div>
-                            </div>
-                        </div>
-                        {/* Email Item 2 */}
-                        <div className="flex items-start gap-4 p-4 border-b border-white/5 hover:bg-white/5 cursor-pointer group transition-colors">
-                            <div className="w-8 h-8 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-xs font-bold shrink-0">GH</div>
-                            <div className="flex-1 min-w-0">
-                                <div className="flex justify-between items-baseline mb-1">
-                                    <span className="text-zinc-300 font-medium truncate">GitHub</span>
-                                    <span className="text-zinc-500 text-xs">Yesterday</span>
+                                <div className="flex-1 min-w-0">
+                                    <div className="flex justify-between items-baseline mb-0.5">
+                                        <span className="text-zinc-200 font-bold truncate text-sm">Test Sender</span>
+                                        <span className="text-zinc-500 text-xs">19.05.2014</span>
+                                    </div>
+                                    <div className="text-zinc-300 text-sm font-bold truncate mb-1">dumps</div>
+                                    <div className="text-zinc-500 text-xs line-clamp-2 leading-relaxed">Hi! Today I get dumps and this encrypted. In readme file you write to mail to you for help. Can you help me?</div>
                                 </div>
-                                <div className="text-zinc-400 text-sm truncate mb-0.5">Security alert for your repository</div>
-                                <div className="text-zinc-500 text-xs truncate leading-relaxed">We found a potential security vulnerability in one of your dependencies. Please review the attached report...</div>
-                            </div>
-                        </div>
-                         {/* Email Item 3 */}
-                         <div className="flex items-start gap-4 p-4 border-b border-white/5 hover:bg-white/5 cursor-pointer group transition-colors">
-                            <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-xs font-bold shrink-0">L</div>
-                            <div className="flex-1 min-w-0">
-                                <div className="flex justify-between items-baseline mb-1">
-                                    <span className="text-zinc-300 font-medium truncate">Linear</span>
-                                    <span className="text-zinc-500 text-xs">Yesterday</span>
-                                </div>
-                                <div className="text-zinc-400 text-sm truncate mb-0.5">Cycle 12 Summary</div>
-                                <div className="text-zinc-500 text-xs truncate leading-relaxed">Here is a summary of your team's progress in Cycle 12. You completed 14 issues and...</div>
-                            </div>
-                        </div>
-                        {/* Email Item 4 */}
-                        <div className="flex items-start gap-4 p-4 border-b border-white/5 hover:bg-white/5 cursor-pointer group transition-colors">
-                            <div className="w-8 h-8 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-xs font-bold shrink-0">AWS</div>
-                            <div className="flex-1 min-w-0">
-                                <div className="flex justify-between items-baseline mb-1">
-                                    <span className="text-zinc-300 font-medium truncate">AWS Billing</span>
-                                    <span className="text-zinc-500 text-xs">Oct 24</span>
-                                </div>
-                                <div className="text-zinc-400 text-sm truncate mb-0.5">Invoice available for October 2025</div>
-                                <div className="text-zinc-500 text-xs truncate leading-relaxed">Your invoice for the billing period October 1 - October 31 is now available. Total amount: $12.40...</div>
                             </div>
                         </div>
                     </div>
+                  </div>
+
+                  {/* Message View (Right) */}
+                  <div className="col-span-5 bg-[#121212] flex flex-col items-center justify-center text-center p-8">
+                    <div className="w-24 h-24 rounded-full bg-[#18181b] flex items-center justify-center mb-6 border border-white/5">
+                        <svg className="w-10 h-10 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-zinc-200 mb-2">{t.mockup.select_mail_title}</h3>
+                    <p className="text-zinc-500 max-w-xs">{t.mockup.select_mail_desc}</p>
                   </div>
                 </div>
               </div>

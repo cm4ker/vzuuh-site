@@ -38,7 +38,27 @@ export const translations = {
       trash: "Trash",
       all: "All",
       unread: "Unread",
-      tags: "Tags"
+      tags: "Tags",
+      tabs: {
+        mail: "Mail",
+        calendar: "Calendar",
+        contacts: "Contacts",
+        tasks: "Tasks"
+      },
+      compose: "Compose",
+      sections: {
+        common: "Common",
+        mail: "Mail"
+      },
+      folders: {
+        all_inboxes: "All Inboxes",
+        starred: "Starred",
+        unread: "Unread",
+        flagged: "Flagged"
+      },
+      search_placeholder: "Search mail...",
+      select_mail_title: "Select a mail to view",
+      select_mail_desc: "Click on a mail in the list on the left to view its content, or double-click to open in a new window"
     },
     roadmap: {
       title: "Roadmap",
@@ -114,7 +134,27 @@ export const translations = {
       trash: "Корзина",
       all: "Все",
       unread: "Непрочитанные",
-      tags: "Теги"
+      tags: "Теги",
+      tabs: {
+        mail: "Почта",
+        calendar: "Календарь",
+        contacts: "Контакты",
+        tasks: "Задачи"
+      },
+      compose: "Написать",
+      sections: {
+        common: "Общее",
+        mail: "Почта"
+      },
+      folders: {
+        all_inboxes: "Все ящики",
+        starred: "Избранное",
+        unread: "Непрочитанные",
+        flagged: "Помеченные"
+      },
+      search_placeholder: "Поиск...",
+      select_mail_title: "Выберите письмо",
+      select_mail_desc: "Нажмите на письмо в списке слева для просмотра, или дважды кликните для открытия в новом окне"
     },
     roadmap: {
       title: "Планы развития",
